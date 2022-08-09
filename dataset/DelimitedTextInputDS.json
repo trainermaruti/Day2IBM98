@@ -11,6 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "input.txt",
+				"folderPath": "abc",
 				"container": "input"
 			},
 			"columnDelimiter": ",",
