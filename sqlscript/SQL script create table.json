@@ -1,0 +1,17 @@
+{
+	"name": "SQL script create table",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE Orders3  (      \n    OrderID int IDENTITY(1,1) NOT NULL     ,\n    OrderDate datetime NOT NULL     ,\n    OrderDescription char(15) DEFAULT 'NewOrder' )  \n    WITH  \n    (   CLUSTERED INDEX (OrderID)  ,   \n    DISTRIBUTION = ROUND_ROBIN  );",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "marutisqldpool1",
+				"poolName": "marutisqldpool1"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

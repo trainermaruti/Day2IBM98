@@ -1,0 +1,17 @@
+{
+	"name": "SQL script add data",
+	"properties": {
+		"content": {
+			"query": "SET NOCOUNT ON   DECLARE @i INT\nSET @i = 1   DECLARE @date DATETIME SET @date = dateadd(mi,@i,'2017-02-04')  \n     WHILE (@i <= 60)   \n     BEGIN    \n     INSERT INTO [Orders3] (OrderDate) SELECT @date   SET @i = @i+1;   \n     END ",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "marutisqldpool1",
+				"poolName": "marutisqldpool1"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

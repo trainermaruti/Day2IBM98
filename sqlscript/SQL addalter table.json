@@ -1,0 +1,17 @@
+{
+	"name": "SQL addalter table",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE dbo.Orders_Staging   \n(OrderID int IDENTITY(1,1) NOT NULL   ,OrderDate datetime NOT NULL   ,\nOrderDescription char(15) DEFAULT 'NewOrder'   ) \n\nALTER TABLE dbo.OrdersPartition SWITCH PARTITION 3 to dbo.Orders_Staging ",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "marutisqldpool1",
+				"poolName": "marutisqldpool1"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
